@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+
+{% for i in movies %}
+<a href="{% url 'movieapp:details' i.id %}"> <img src="{{i.img.url}}" alt="" width="200px" height="250px"></a><br>
+<a href="{% url 'movieapp:details' i.id %}"> {{i.name}}</a><br>
+
+{% endfor %}
+
+<a href="{% url 'movieapp:add_movie' %}"><button style=" background-color: yellow;
+            border: 2px solid black;
+            color: green;">Add Movie</button></a><br>
+
+{% endblock%}
+
+<!--
+</body>
+</html>-->

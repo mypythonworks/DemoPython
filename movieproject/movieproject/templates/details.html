@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+
+{{movie.name}}<br>
+<img src="{{movie.img.url}}" width="200px" height="250px"><br>
+{{movie.yr}}<br>
+{{movie.desc}}<br>
+
+<div><a href="{% url 'movieapp:update' movie.id %}"><button style=" background-color: yellow;
+            border: 2px solid black;
+            color: green;">Update Movie</button></a><br></div>
+<div><a href="{% url 'movieapp:delete' movie.id %}"><button style=" background-color: yellow;
+            border: 2px solid black;
+            color: green;">Delete Movie</button></a><br></div>
+{% endblock%}
+
+
